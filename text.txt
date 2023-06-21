@@ -1,0 +1,4 @@
+username: drex3795
+password: khAzBdKmblGqqHwZ
+
+mongodb+srv://drex3795:khAzBdKmblGqqHwZ@reactbackendportfolio.mokanbs.mongodb.net/
