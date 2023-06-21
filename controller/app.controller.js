@@ -1,11 +1,11 @@
-const { portfolioSchema } = require('../model/portfolio_model');
+const { portfolioModel } = require('../model/portfolio_model');
 const { testimonialModel } = require('../model/testimonial_model');
 
 
 exports.portfolioAppRoute = async (req, res) => {
     try {
 
-        items = await portfolioSchema.find({});
+        items = await portfolioModel.find({});
 
 
         return res.status(200).send({
@@ -14,7 +14,7 @@ exports.portfolioAppRoute = async (req, res) => {
         });
     } catch (error) {
 
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).json({ error: `Internal server error' ${error}` });
     }
 }
 
@@ -34,3 +34,4 @@ exports.testimonialRoute = async (req, res) => {
 
     }
 }
+
